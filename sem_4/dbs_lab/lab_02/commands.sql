@@ -206,7 +206,7 @@ ID    NAME                 DEPT_NAME                SALARY
 
 /* Q11. Find the names of courses in CSE department which have 3 credits */
 
-SELECT TITLE FROM COURSE WHERE CREDITS=3;
+SELECT TITLE FROM COURSE WHERE dept_name='Comp. Sci' AND CREDITS=3;
 
 /*
 TITLE
@@ -334,7 +334,7 @@ Kim                        80000
 
 /* Q18. Find the names of all instructors whose department name includes the substring ‘ch’. */
 
-SELECT NAME FROM INSTRUCTOR WHERE NAME LIKE '%ng%';
+SELECT NAME FROM INSTRUCTOR WHERE DEPT_NAME LIKE '%ng%';
 
 /*
 NAME
@@ -440,7 +440,7 @@ NVL(END_HR,17)
 
 /* Q23. Display the salary and salary/3 rounded to nearest hundred from Instructor. */
 
-SELECT SALARY, ROUND(SALARY/3, -2)FROM INSTRUCTOR;
+SELECT SALARY, ROUND(SALARY/3, -2) FROM INSTRUCTOR;
 
 /*
     SALARY ROUND(SALARY/3,-2)
