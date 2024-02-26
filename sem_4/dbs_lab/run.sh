@@ -1,1 +1,0 @@
-rlwrap sqlplus rohan/ZsudoZ556Z@//192.168.1.130:1521/XEPDB1
