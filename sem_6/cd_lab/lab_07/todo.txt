@@ -1,0 +1,13 @@
+1. [done] simplify grammar (remove ambiguity, left recursion, left factoring)
+2. [not needed] first and follow functions.
+3. [done] use lexical analyser 
+4. create parser program
+
+
+Program → main () { declarations assign_stat }
+declarations → data-type identifier-list ; declarations'
+declarations' → declarations | ε
+data-type → int | char
+identifier-list → id identifier-list'
+identifier-list' → , identifier-list | ε
+assign_stat → id = id ; | id = num ;

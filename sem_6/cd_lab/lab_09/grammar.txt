@@ -1,0 +1,17 @@
+E->E+T|T
+T-> T*F|F
+F-> ( E )|id
+
+
+r0: Eprime -> E
+r1: E -> E + T
+r2: E -> T
+r3: T -> T * F
+r4: T -> F
+r5: F -> (E)
+r6: F -> id
+
+FOLLOW(Eprime) = {$}
+FOLLOW(E) = {+. )}
+FOLLOW(T) = {*, +, )}
+FOLLOW(F) = {*, +, )}

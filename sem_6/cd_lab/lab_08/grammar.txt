@@ -1,0 +1,28 @@
+Program → main () { Declarations StatementList }
+
+Declarations → (data-type identifier-list ;)*
+data-type → int | char
+identifier-list → id identifier-list'
+identifier-list' → , identifier-list | {number} identifier-list | [number] | ε
+
+StatementList → Statement+
+Statement → assign-stat; | decision-stat
+
+assign-stat → id = expn
+expn → simple-expn eprime
+eprime → relop simple-expn | ε
+
+simple-expn → term seprime
+seprime → (addop term)*
+
+term → factor tprime
+tprime → (mulop factor)*
+
+factor → id | num
+
+decision-stat → if (expn) { StatementList } dprime
+dprime → else { StatementList } | ε
+
+relop → == | != | <= | >= | > | <
+addop → + | -
+mulop → * | / | %
